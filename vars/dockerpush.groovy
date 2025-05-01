@@ -7,13 +7,3 @@ def call(String credId, String imageName,String imageTag){
                     sh "docker push ${env.dockerHubUser}/${imageName}:${imageTag}"
           }
 }
-
-
-# withCredentials([usernamePassword(
-  #                  'credentialsId':"dockerHubCred",
-   #                 usernameVariable:"dockerHubUser/USERNAME"
-    #                passwordVariable:"dockerHubPASS/PASSWORD")]) {
-    #            sh "docker login -u ${env.dockerHubUser/USERNAME} -p ${env.dockerHubPass/PASSWORD} "
-    #            sh "docker image tag image:latest ${env.dockerHuvuser}/image:latest"
-    #            sh "docker push ${env.dockerHuvuser/USERNAME}/image:latest"
-    #            }
